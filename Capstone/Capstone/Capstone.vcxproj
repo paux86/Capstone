@@ -21,10 +21,12 @@
   <ItemGroup>
     <ClCompile Include="src\Core\Engine.cpp" />
     <ClCompile Include="src\Core\main.cpp" />
+    <ClCompile Include="src\Core\Message.cpp" />
     <ClCompile Include="src\Core\Systems\InputSystem.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Core\Engine.h" />
+    <ClInclude Include="src\Core\Message.h" />
     <ClInclude Include="src\Core\System.h" />
     <ClInclude Include="src\Core\Systems\InputSystem.h" />
     <ClInclude Include="src\Core\Systems\Systems.h" />
