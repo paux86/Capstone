@@ -3,6 +3,7 @@
 #include <vector>
 #include "System.h"
 #include "Message.h"
+#include "EntityFactory.h"
 
 #define SCREEN_WIDTH 960
 #define SCREEN_HEIGHT 640
@@ -26,5 +27,6 @@ private:
 	SDL_Renderer* renderer;
 	std::vector<System*> systems;
 	static std::vector<Message*> messages;
+	EntityFactory entityFactory;
 };
 
