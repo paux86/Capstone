@@ -6,5 +6,6 @@ public:
 	InputSystem();
 	void Init();
 	void Update(float dt);
+	void HandleMessage(Message* msg);
 	~InputSystem();
 };

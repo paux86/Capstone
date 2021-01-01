@@ -1,11 +1,14 @@
 #include "Engine.h"
 #include "Systems/InputSystem.h"
+#include <iostream>
 
+std::vector<Message*> Engine::messages;
 
 Engine::Engine()
 {
 	if (Init())
 	{
+		std::cout << "Initialized\n";
 		Run();
 	}
 }
@@ -46,6 +49,22 @@ bool Engine::Run()
 {
 	while (running)
 	{
+		//handle messages (should try to implement pub-sub)
+		while (!messages.empty())
+		{
+			Message* message = messages.back();
+			messages.pop_back();
+			if (message->id == "QUIT")
+			{
+				Quit();
+			}
+			for (auto system : systems)
+			{
+				system->HandleMessage(message);
+			}
+		}
+		
+		//update all systems
 		for (auto system : systems)
 		{
 			//need to pass actual delta time
@@ -57,6 +76,7 @@ bool Engine::Run()
 
 bool Engine::Quit()
 {
+	std::cout << "Quit\n";
 	running = false;
 	return true;
 }
@@ -66,4 +86,9 @@ void Engine::Cleanup()
 	SDL_DestroyRenderer(renderer);
 	SDL_DestroyWindow(window);
 	SDL_Quit();
+}
+
+void Engine::BroadcastMessage(Message* message)
+{
+	messages.push_back(message);
 }
