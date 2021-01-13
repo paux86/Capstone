@@ -19,20 +19,24 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="EntityFactory.cpp" />
+    <ClCompile Include="src\Core\Components\Transform.cpp" />
     <ClCompile Include="src\Core\Engine.cpp" />
+    <ClCompile Include="src\Core\EntityFactory.cpp" />
     <ClCompile Include="src\Core\main.cpp" />
     <ClCompile Include="src\Core\Message.cpp" />
     <ClCompile Include="src\Core\Systems\InputSystem.cpp" />
+    <ClCompile Include="src\Core\Vec2.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Entity.h" />
-    <ClInclude Include="EntityFactory.h" />
+    <ClInclude Include="src\Core\Component.h" />
+    <ClInclude Include="src\Core\Components\Transform.h" />
     <ClInclude Include="src\Core\Engine.h" />
+    <ClInclude Include="src\Core\Entity.h" />
+    <ClInclude Include="src\Core\EntityFactory.h" />
     <ClInclude Include="src\Core\Message.h" />
     <ClInclude Include="src\Core\System.h" />
     <ClInclude Include="src\Core\Systems\InputSystem.h" />
-    <ClInclude Include="src\Core\Systems\Systems.h" />
+    <ClInclude Include="src\Core\Vec2.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>

@@ -9,7 +9,6 @@ Engine::Engine()
 	if (Init())
 	{
 		std::cout << "Initialized\n";
-		Run();
 	}
 }
 
@@ -62,6 +61,7 @@ bool Engine::Run()
 			{
 				system->HandleMessage(message);
 			}
+			delete(message);
 		}
 		
 		//update all systems

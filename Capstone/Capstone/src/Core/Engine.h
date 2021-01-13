@@ -16,6 +16,7 @@ public:
 	~Engine();
 	bool Run();
 	static void BroadcastMessage(Message*);
+	EntityFactory entityFactory;
 
 private:
 	bool Init();
@@ -27,6 +28,5 @@ private:
 	SDL_Renderer* renderer;
 	std::vector<System*> systems;
 	static std::vector<Message*> messages;
-	EntityFactory entityFactory;
 };
 

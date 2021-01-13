@@ -1,7 +1,11 @@
 #include "Transform.h"
 
+Transform::Transform()
+{
+	position = Vec2();
+}
+
 Transform::Transform(Vec2 pos)
 {
-	position.x = pos.x;
-	position.y = pos.y;
+	position = Vec2(pos.x, pos.y);
 }
