@@ -11,8 +11,9 @@ public:
 	EntityFactory();
 	~EntityFactory();
 	Entity CreateEntity();
-	void DestroyEntity();
+	void DestroyEntity(Entity);
 	Component* AddComponent(Entity, std::string);
+	Component* GetComponent(Entity, std::string);
 	void RemoveComponent(Entity, std::string);
 
 private:
