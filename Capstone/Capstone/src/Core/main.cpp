@@ -1,15 +1,11 @@
-#include "Engine.h"
+#include "Game.h"
 
 int main(int argc, char* args[])
 {
-	Engine engine;
+	Game game;
 
-	Entity ent = engine.entityFactory.CreateEntity();
-	Transform* ent_transform = (Transform*)engine.entityFactory.AddComponent(ent, "TRANSFORM");
-	ent_transform->position.x = 1;
-	ent_transform->position.y = 1;
-
-	engine.Run();
+	game.Startup();
+	game.Run();
 
 	return 0;
 }

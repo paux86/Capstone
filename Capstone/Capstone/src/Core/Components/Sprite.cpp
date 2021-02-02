@@ -2,5 +2,6 @@
 
 Sprite::Sprite()
 {
-	spriteTexture = nullptr;
+	spriteTexture = NULL;
+	width = height = 0;
 }

@@ -9,5 +9,6 @@ public:
 	Sprite();
 	std::string spritePath;
 	SDL_Texture* spriteTexture;
+	int width, height;
 };
 

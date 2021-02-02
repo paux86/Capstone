@@ -3,19 +3,26 @@
 #include "../Components/Transform.h"
 #include "../Components/Sprite.h"
 #include <vector>
+#include <SDL_image.h>
+
 
 class RenderSystem : public System
 {
 public:
-	RenderSystem(std::vector<Transform>* transforms, std::vector<Sprite>* sprites);
+	RenderSystem(SDL_Window* window, SDL_Renderer* renderer, std::vector<Transform>* transforms, std::vector<Sprite>* sprites);
+	~RenderSystem();
 	void Init();
-	void Update();
+	void Update(float dt);
 	void HandleMessage(Message* msg);
 
 private:
-	bool loadFromFile(std::string path);
-	void free();
+	bool loadSprite(Sprite&);
+	void renderSprite(const Sprite&, const Transform&);
+	void freeSprite(Sprite& sprite);
+	void freeAllSprites();
 
+	SDL_Window* windowRef;
+	SDL_Renderer* rendererRef;
 	std::vector<Transform>* transformComponents;
 	std::vector<Sprite>* spriteComponents;
 };

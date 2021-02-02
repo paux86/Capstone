@@ -1,11 +1,22 @@
 #include "Transform.h"
 
+/*
 Transform::Transform()
 {
-	position = Vec2();
+	componentType = "TRANSFORM";
+	position = Vec2<float>();
+}
+*/
+
+
+Transform::Transform() : Transform(Vec2<int>())
+{
+
 }
 
-Transform::Transform(Vec2 pos)
+Transform::Transform(Vec2<int> pos)
 {
-	position = Vec2(pos.x, pos.y);
+	componentType = "TRANSFORM";
+	//TODO: change this after adding vec2 operator overloading
+	position = Vec2<int>(pos.x, pos.y);
 }

@@ -6,7 +6,8 @@ class Transform : public Component
 {
 public:
 	Transform();
-	Transform(Vec2);
-	Vec2 position;
+	Transform(Vec2<int>);
+	Vec2<int> position;
+
 };
 
