@@ -1,8 +1,11 @@
-#include "Engine.h"
+#include "Game.h"
 
 int main(int argc, char* args[])
 {
-	Engine engine;
+	Game game;
+
+	game.Startup();
+	game.Run();
 
 	return 0;
 }

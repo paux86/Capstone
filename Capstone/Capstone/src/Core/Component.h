@@ -1,9 +1,13 @@
 #pragma once
-#include "Entity.h"
+#include "GameObject.h"
+#include <string>
+
+class GameObject;
 class Component
 {
 public:
 	virtual ~Component() {};
-	Entity entity;
+	std::string componentType;
+	GameObject* p_GameObject;
 };
 
