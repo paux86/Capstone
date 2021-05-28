@@ -1,0 +1,10 @@
+#pragma once
+#include "InputSystem.h"
+#include "RenderSystem.h"
+#include "PhysicsSystem.h"
+#include "PlayerControllerSystem.h"
+#include "GameLogicSystem.h"
+#include "HealthSystem.h"
+#include "DamageSystem.h"
+#include "EnemyControllerSystem.h"
+#include "DurationSystem.h"
