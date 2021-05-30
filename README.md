@@ -1,2 +1,2 @@
 # Capstone
-Smash TV inspired rogue-lite in custom ECS engine in C++
+Smash TV inspired rogue-lite in custom ECS engine in C++, by Matt Brierley
